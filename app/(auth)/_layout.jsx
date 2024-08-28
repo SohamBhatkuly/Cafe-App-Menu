@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const AuthLayout = () => {
+const menu = () => {
   return (
     <View>
       <Text>AuthLayout</Text>
@@ -9,4 +9,4 @@ const AuthLayout = () => {
   )
 }
 
-export default AuthLayout
+export default menu

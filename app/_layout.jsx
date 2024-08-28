@@ -1,13 +1,17 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { Slot, Stack } from 'expo-router'
+import { useEffect } from 'react';
+import { Stack, router } from 'expo-router';
 
 const RootLayout = () => {
+  useEffect(() => {
+    router.replace('/menu');  // Redirects to the menu page on load
+  }, []);
+
   return (
     <Stack>
-      <Stack.Screen name="index" options={{headerShown:false}}/>
+      {/* Only the menu page is kept */}
+      <Stack.Screen name="menu" options={{ headerShown: false }} />
     </Stack>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;
